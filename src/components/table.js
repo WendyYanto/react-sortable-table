@@ -72,9 +72,9 @@ function Table() {
   function sortByAge(isASC) {
     const newItems = items.sort((first, second) => {
       if (isASC) {
-        return first.age - second.age
+        return first.age > second.age ? 1 : -1
       } 
-      return second.age - first.age
+      return first.age > second.age ? -1 : 1
     })
     setItems([...newItems])
   }
