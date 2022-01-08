@@ -28,8 +28,10 @@ function TableHeader(props) {
   const [isASC, setASC] = useState(false)
 
   const onClick = (sortBy) => {
-    setASC(!isASC)
-    onSort(sortBy, isASC)
+    const sortedValue = !isASC
+
+    setASC(sortedValue)
+    onSort(sortBy, sortedValue)
     updateTabs(sortBy)
   }
 

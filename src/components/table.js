@@ -62,9 +62,9 @@ function Table() {
   function sortByName(isASC) {
     const newItems = items.sort((first, second) => {
       if (isASC) {
-        return first.name > second.name ? -1 : 1
+        return first.name > second.name ? 1 : -1
       } 
-      return first.name > second.name ? 1 : -1
+      return first.name > second.name ? -1 : 1
     })
     setItems([...newItems])
   }
@@ -72,9 +72,9 @@ function Table() {
   function sortByAge(isASC) {
     const newItems = items.sort((first, second) => {
       if (isASC) {
-        return second.age - first.age
+        return first.age - second.age
       } 
-      return first.age - second.age
+      return second.age - first.age
     })
     setItems([...newItems])
   }
@@ -82,9 +82,9 @@ function Table() {
   function sortByHobby(isASC) {
     const newItems = items.sort((first, second) => {
       if (isASC) {
-        return first.hobby > second.hobby ? -1 : 1
+        return first.hobby > second.hobby ? 1 : -1
       } 
-      return first.hobby > second.hobby ? 1 : -1
+      return first.hobby > second.hobby ? -1 : 1
     })
     setItems([...newItems])
   }
